@@ -11,8 +11,6 @@ define(["dojo/_base/declare",
 				}
 				dom.byId('console').innerHTML += "<div>" + msg + "</div>";
 			}
-		/*constructor: function(args){
-			declare.safeMixin(this, args);
-		}*/
 	});
 });
+
