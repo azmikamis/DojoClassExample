@@ -1,17 +1,25 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css" media="screen">
+		<script>
+    dojoConfig = {
+		async: true,
+		packages:[{
+			name:"app", location:"/app"
+		}]
+	};
+</script>
 		<script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.0/dojo/dojo.js"></script>
 		<script>
 			require([
-					"app/counter.js", "app/logger.js"
+					"app/counter", "app/logger"
 				], function(counter, Logger){
-				var log = new Logger();
-				log(counter.getValue());
+				var logger = new Logger();
+				logger.log(counter.getValue());
 				counter.increment();
-				log(counter.getValue());
+				logger.log(counter.getValue());
 				counter.decrement();
-				log(counter.getValue());
+				logger.log(counter.getValue());
 			});
 		</script>
 	</head>

@@ -5,6 +5,10 @@ define(["dojo/_base/declare",
 		"dojo/dom"
 	], function(declare, win, domConstruct, dom){
 		return declare(null, {
+			//constructor: function(/* Object */args){
+			//	dojo.safeMixin(this, args);
+			//	}
+			//
 			log : function(msg){
 				if(!dom.byId('console')){
 					domConstruct.create('div', {id:'console'}, win.body());
