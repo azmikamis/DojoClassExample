@@ -5,7 +5,7 @@
     dojoConfig = {
 		async: true,
 		packages:[{
-			name:"app", location:"/app"
+			name:"app", location:location.pathname.replace(/\/[^/]+$/, "") + "/app"
 		}]
 	};
 </script>
